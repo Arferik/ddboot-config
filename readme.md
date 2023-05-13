@@ -16,7 +16,7 @@ config module for [Nest](https://github.com/nestjs/nest)
 ## Installation
 
 ```bash
-$ npm i --save @ddboot/config
+$ npm i --save @ddboot/config yaml lodash
 ```
 
 ## Quick Start

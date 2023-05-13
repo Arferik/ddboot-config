@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tansincosy/nestboot-logger.git"
+    "url": "git+https://github.com/Arferik/config.git"
   },
   "keywords": [
     "nestjs",
@@ -30,9 +30,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tansincosy/nestboot-logger/issues"
+    "url": "https://github.com/Arferik/config/issues"
   },
-  "homepage": "https://github.com/tansincosy/nestboot-logger#readme",
+  "homepage": "https://github.com/Arferik/config#readme",
   "devDependencies": {
     "@nestjs/common": "^9.3.9",
     "@nestjs/core": "^9.3.9",
