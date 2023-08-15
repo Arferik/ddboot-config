@@ -9,7 +9,6 @@ import {
 import {
   CONFIG_OPTION,
   CONFIG,
-  CONFIG_NAME,
   CONFIG_META,
   CONFIG_META_CONFIG,
 } from './config.constant';
@@ -59,7 +58,7 @@ export class ConfigModule implements OnModuleInit {
       }
     });
   }
-  static forRoot(options: ConfigOption): DynamicModule {
+  static forRoot(options?: ConfigOption): DynamicModule {
     const configProvider: Provider = {
       provide: CONFIG,
       useClass: ConfigService,
@@ -67,13 +66,10 @@ export class ConfigModule implements OnModuleInit {
     const configBootOptionProvider: Provider = {
       provide: CONFIG_OPTION,
       useFactory() {
-        return Object.assign(
-          {
-            fileName: CONFIG_NAME,
-            filePath: '.',
-          },
-          options,
-        );
+        if (options) {
+          return options;
+        }
+        return null;
       },
     };
     return {
