@@ -24,9 +24,11 @@ export class ConfigFileLoader {
         'the configOption is null, use default config file, the file name is ' +
           CONFIG_NAME,
       );
+    } else {
+      filePath = this.configOption.filePath;
+      fileName = this.configOption.fileName;
+      this.logger.log('use configOption to load config file');
     }
-    filePath = this.configOption.filePath;
-    fileName = this.configOption.fileName;
 
     if (!filePath || !fileName) {
       this.logger.error('filePath or fileName is null');
